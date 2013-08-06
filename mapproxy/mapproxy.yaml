@@ -1,0 +1,148 @@
+# vim: set tabstop=2 shiftwidth=2 expandtab:
+services:
+  demo:
+  kml:
+  tms:
+    # needs no arguments
+  wms:
+    srs: ['EPSG:4326', 'EPSG:900913', 'EPSG:3008', 'EPSG:3006', 'EPSG:3857']
+    md:
+      title: OpenStreetMap Sweden WMS Proxy
+      abstract: This is the fantastic MapProxy.
+      online_resource: http://mapproxy.org/
+      contact:
+        person: Kodapan
+        position: Technical Director
+        organization: 
+        address: Fakestreet 123
+        city: Somewhere
+        postcode: 12345
+        country: Sweden
+        phone: +46(0)000-000000-0
+        fax: +46(0)000-000000-0
+        email: mapproxy@kodapan.se
+      access_constraints:
+        This service is intended for private and evaluation use only.
+        The data is licensed as Creative Commons Attribution-Share Alike 2.0
+        (http://creativecommons.org/licenses/by-sa/2.0/)
+      fees: 'None'
+
+layers:
+  - name: ek
+    title: Ekonomiska kartan
+    sources: [ek_cache]
+  - name: lomma_outlines
+    title: Lomma kommun road outlines
+    sources: [lomma_outlines_cache]
+
+
+caches:
+  ek_cache:
+    grids: [osm_grid]
+    sources: [ek_wms]
+    format: image/png
+    cache:
+      type: file
+      directory_layout: tms
+  lomma_outlines_cache:
+    grids: [osm_grid]
+    sources: [lomma_lomma_outlines_wms, lomma_bjarred_outlines_wms, lomma_landsbyggden_outlines_wms]
+    format: image/png
+    cache:
+      type: file
+      directory_layout: tms
+
+sources:
+  # Ekonomiska kartan
+  ek_wms:
+    type: wms
+    wms_opts:
+      featureinfo: true
+      version: 1.1.1
+    req:
+      url: http://www.gavert.net/cgi-bin/mapserv?
+      map: ek.map
+      layers: virtualraster
+    supported_srs: ['EPSG:4326']
+    supported_formats: [image/png]
+    coverage:
+      bbox: [10.9337, 55.3173, 24.2508, 66.6882]
+      bbox_srs: 'EPSG:4326'
+  # Lomma road outlines
+  lomma_lomma_outlines_wms:
+    type: mapserver
+    wms_opts:
+      featureinfo: True
+      version: 1.1.1
+    req:
+      map: /var/www/mapserver/wms.map
+      layers: lomma_lomma_outlines
+      transparent: true
+    supported_formats: [image/png]
+    coverage:
+      bbox: [13.055951, 55.661070, 13.097535, 55.683831]
+      bbox_srs: 'EPSG:4326'
+    mapserver:
+      binary: /usr/lib/cgi-bin/mapserv
+      working_dir: /var/www/mapserver
+  lomma_bjarred_outlines_wms:
+    type: mapserver
+    wms_opts:
+      featureinfo: True
+      version: 1.1.1
+    req:
+      map: /var/www/mapserver/wms.map
+      layers: lomma_bjarred_outlines
+      transparent: true
+    supported_formats: [image/png]
+    coverage:
+      bbox: [12.999762, 55.708062, 13.050247, 55.742122]
+      bbox_srs: 'EPSG:4326'
+    mapserver:
+      binary: /usr/lib/cgi-bin/mapserv
+      working_dir: /var/www/mapserver
+  lomma_landsbyggden_outlines_wms:
+    type: mapserver
+    wms_opts:
+      featureinfo: True
+      version: 1.1.1
+    req:
+      map: /var/www/mapserver/wms.map
+      layers: lomma_landsbyggden_outlines
+      transparent: true
+    supported_formats: [image/png]
+    coverage:
+      bbox: [12.999305, 55.640715, 13.135225, 55.756643]
+      bbox_srs: 'EPSG:4326'
+    mapserver:
+      binary: /usr/lib/cgi-bin/mapserv
+      working_dir: /var/www/mapserver
+
+
+
+grids:
+  osm_grid:
+    srs: 'EPSG:3857'
+    num_levels: 20
+    tile_size: [ 256, 256 ]
+    bbox: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    bbox_srs: 'EPSG:3857'
+    res_factor: 2
+    origin: nw
+
+globals:
+  cache:
+    base_dir: './cache_data'
+    lock_dir: './cache_data/locks'
+    meta_size: [2, 2]
+    meta_buffer: 0
+  image:
+    resampling_method: bicubic
+    paletted: false
+    formats:
+      image/png:
+        mode: RGBA
+        colors: 0
+        transparent: true
+  tiles:
+    expires_hours: 1

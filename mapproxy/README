@@ -1,0 +1,11 @@
+MapProxy installed in VirtualEnv
+
+Activate using: source bin/activate
+Run using: mapproxy-util serve-develop -b 0.0.0.0:8080 mapproxy.yaml
+
+Run using Spawning:
+
+in the mapproxy confug.py directory run:
+bin/spawning config.application --threads=8 --processes=4 --port=8080
+
+Remember to activate the virtualenv first!

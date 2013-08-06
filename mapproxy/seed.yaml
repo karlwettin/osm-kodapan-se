@@ -1,0 +1,15 @@
+# vim: set tabstop=2 shiftwidth=2 expandtab:
+coverages:
+  ek:
+    bbox: [10.9337, 55.3173, 24.2508, 66.6882]
+    bbox_srs: 'EPSG:4326'
+
+seeds:
+  ek:
+    caches: ['ek_cache']
+    grids: ['osm_grid']
+    levels:
+      from: 12
+      to: 13
+    coverages: ['ek']
+
