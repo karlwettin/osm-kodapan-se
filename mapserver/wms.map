@@ -1,0 +1,120 @@
+MAP
+	NAME "Skattjakt"
+	STATUS ON
+	SIZE 800 600
+	EXTENT -180 -90 180 90
+	SHAPEPATH "data"
+	IMAGETYPE PNG
+	TRANSPARENT ON
+	IMAGECOLOR 255 255 255
+	FONTSET "fonts.list"
+
+	OUTPUTFORMAT
+		NAME "png"
+		DRIVER AGG/PNG
+		MIMETYPE "image/png"
+		IMAGEMODE RGBA
+		EXTENSION "png"
+		FORMATOPTION "GAMMA=0.75"
+	END
+
+	WEB
+		METADATA
+			"wms_title"           "OpenStreetMap Sweden WMS"
+			"wms_onlineresource"  "http://osm.kodapan.se/wms?"
+			"wms_srs"             "EPSG:4269 EPSG:4326 EPSG:3857"
+			"wms_enable_request"  "GetCapabilities GetMap GetFeatureInfo DescribeLayer GetLegendGraphic"
+		END
+	END
+
+	PROJECTION
+		"init=epsg:4326"
+	END
+
+	LAYER
+		NAME "lomma_lomma_outlines"
+		DATA "lomma/lomma/outlines"
+		PROJECTION
+			"init=epsg:4326"
+		END
+		METADATA
+			"wms_title" "lomma_lomma_outlines"
+		END
+		STATUS ON
+		TYPE LINE
+		CLASS
+			NAME "Lomma road outlines"
+			STYLE
+				OUTLINECOLOR 255 0 0
+			END
+		END
+	END
+	LAYER
+		NAME "lomma_bjarred_outlines"
+		DATA "lomma/bjarred/outlines"
+		PROJECTION
+			"init=epsg:4326"
+		END
+		METADATA
+			"wms_title" "lomma_bjarred_outlines"
+		END
+		STATUS ON
+		TYPE LINE
+		CLASS
+			NAME "Bjärred road outlines"
+			STYLE
+				OUTLINECOLOR 255 0 0
+			END
+		END
+	END
+	LAYER
+		NAME "lomma_landsbyggden_outlines"
+		DATA "lomma/landsbyggden/outlines"
+		PROJECTION
+			"init=epsg:4326"
+		END
+		METADATA
+			"wms_title" "lomma_landsbyggden_outlines"
+		END
+		STATUS ON
+		TYPE LINE
+		CLASS
+			NAME "Lomma landsbyggden road outlines"
+			STYLE
+				OUTLINECOLOR 255 0 0
+			END
+		END
+	END
+	LAYER
+		NAME "scb_postnummer"
+		DATA "scb/postnr"
+		PROJECTION
+			"init=epsg:4326"
+		END
+		METADATA
+			"wms_title" "scb_postnummer"
+		END
+		STATUS ON
+		TYPE POLYGON
+		LABELITEM "POSTNR"
+		CLASS
+			NAME "SCB Postnummer"
+			STYLE
+				OUTLINECOLOR 255 0 0
+			END
+			LABEL
+				COLOR 255 128 128
+				TYPE TRUETYPE
+				FONT "sans"
+				ANTIALIAS TRUE
+				POSITION AUTO
+				SIZE 8
+			END
+		END
+	END
+
+
+
+
+END
+
