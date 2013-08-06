@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map background-color="transparent" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" font-directory="./fonts" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<FontSet name="fontset-0">
+  <Font face-name="Open Sans Semibold"/>
+  <Font face-name="DejaVu Sans Book"/>
+  <Font face-name="unifont Medium"/>
+</FontSet>
+<FontSet name="fontset-1">
+  <Font face-name="Open Sans Bold Italic"/>
+  <Font face-name="DejaVu Sans Bold Italic"/>
+  <Font face-name="unifont Medium"/>
+</FontSet>
+<FontSet name="fontset-2">
+  <Font face-name="Open Sans Bold"/>
+  <Font face-name="DejaVu Sans Bold"/>
+  <Font face-name="unifont Medium"/>
+</FontSet>
+<FontSet name="fontset-3">
+  <Font face-name="Open Sans Semibold Italic"/>
+  <Font face-name="DejaVu Sans Italic"/>
+  <Font face-name="unifont Medium"/>
+</FontSet>
+
+<Style name="unpaved_roads" filter-mode="first" >
+  <!-- zoom 5 -> 7 -->
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>4000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" stroke="#8B4513" stroke-linejoin="round" stroke-dasharray="1,1" />
+  </Rule>
+  <!-- zoom 8 -> 10 -->
+  <Rule>
+    <MaxScaleDenominator>2500000</MaxScaleDenominator>
+    <MinScaleDenominator>540000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke="#8B4513" stroke-linejoin="round" stroke-dasharray="1,1" />
+  </Rule>
+  <!-- zoom 11 -> 12 -->
+  <Rule>
+    <MaxScaleDenominator>500000</MaxScaleDenominator>
+    <MinScaleDenominator>130000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#8B4513" stroke-linejoin="round" stroke-dasharray="1,1" />
+  </Rule>
+  <!-- zoom 13 -> 14 -->
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>30000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="4" stroke="#8B4513" stroke-linejoin="round" stroke-dasharray="2,2" />
+  </Rule>
+  <!-- zoom 15 -> 16 -->
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>8000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="6" stroke="#8B4513" stroke-linejoin="round" stroke-dasharray="3,3" />
+  </Rule>
+  <!-- zoom 17 -> 18 -->
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="8" stroke="#8B4513" stroke-linejoin="round" stroke-dasharray="4,4" />
+  </Rule>
+  <!-- zoom 19 -> 20 -->
+  <Rule>
+    <MaxScaleDenominator>1000</MaxScaleDenominator>
+    <MinScaleDenominator>520</MinScaleDenominator>
+    <LineSymbolizer stroke-width="10" stroke="#8B4513" stroke-linejoin="round" stroke-dasharray="5,5" />
+  </Rule>
+</Style>
+
+<Layer name="unpaved_roads"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>unpaved_roads</StyleName>
+    <Datasource>
+       <Parameter name="type">postgis</Parameter>
+       <Parameter name="dbname">gis</Parameter>
+       <Parameter name="extent">-20037508.34 -20037508.34 20037508.34 20037508.34</Parameter>
+       <Parameter name="geometry_field">way</Parameter>
+       <Parameter name="host">osm.kodapan.se</Parameter>
+       <Parameter name="table">( SELECT way, highway AS type, surface FROM planet_osm_line WHERE surface IN ('unpaved', 'gravel', 'ground', 'dirt', 'grass', 'compacted', 'pebblestone', 'fine_gravel', 'earth', 'mud', 'sand', 'dirt/sand', 'clay', 'grass;earth', 'gravel;ground', 'grass;ground', 'pebbles', 'soil', 'grass;sand', 'gravel;grass', 'ground;gravel', 'sawdust', 'bark', 'ground;sand' ) ) AS roads</Parameter>
+    </Datasource>
+  </Layer>
+</Map>

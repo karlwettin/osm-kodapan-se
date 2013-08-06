@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" font-directory="./fonts" background-color="#3ebcef" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Style name="land" filter-mode="first" >
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#e0e0e0" gamma="0.75" />
+  </Rule>
+</Style>
+<Layer name="land"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>land</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="file"><![CDATA[/etc/mapnik-osm-data/OSMBright/layers/land/ae26f3ca-10m-land.shp]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[land]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="processed_p" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#e0e0e0" gamma="0.75" />
+  </Rule>
+</Style>
+<Layer name="processed_p"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>processed_p</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/etc/mapnik-osm-data/OSMBright/layers/processed_p/7f5a1dfb-coastline-good.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="shoreline_300" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#e0e0e0" gamma="0.75" />
+  </Rule>
+</Style>
+<Layer name="shoreline_300"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>shoreline_300</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/etc/mapnik-osm-data/OSMBright/layers/shoreline_300/ab6b4f6f-shoreline_300.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="landuse_gen0" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#c3d9ad" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'university')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'stadium')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'sports_center')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'school')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <PolygonSymbolizer fill="#dcdcdc" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <PolygonSymbolizer fill="#f6f6f6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#eeeeee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'park')</Filter>
+    <PolygonSymbolizer fill="#c2debd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'industrial')</Filter>
+    <PolygonSymbolizer fill="#d7d7d7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'hospital')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#e6f2c1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'forest')</Filter>
+    <PolygonSymbolizer fill="#c3d9ad" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'common')</Filter>
+    <PolygonSymbolizer fill="#c2debd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'commercial')</Filter>
+    <PolygonSymbolizer fill="#d7d7d7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'college')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#d6ded2" />
+  </Rule>
+</Style>
+<Layer name="landuse_gen0"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse_gen0</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[landuse_gen0]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
+  FROM planet_osm_polygon
+  WHERE way_area > 100000
+  ORDER BY way_area DESC
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="landuse_gen1" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#c3d9ad" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'university')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'stadium')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'sports_center')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'school')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <PolygonSymbolizer fill="#dcdcdc" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <PolygonSymbolizer fill="#f6f6f6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#eeeeee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'park')</Filter>
+    <PolygonSymbolizer fill="#c2debd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'industrial')</Filter>
+    <PolygonSymbolizer fill="#d7d7d7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'hospital')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#e6f2c1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'forest')</Filter>
+    <PolygonSymbolizer fill="#c3d9ad" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'common')</Filter>
+    <PolygonSymbolizer fill="#c2debd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'commercial')</Filter>
+    <PolygonSymbolizer fill="#d7d7d7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'college')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#d6ded2" />
+  </Rule>
+</Style>
+<Layer name="landuse_gen1"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse_gen1</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[landuse_gen1]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
+  FROM planet_osm_polygon
+  WHERE way_area > 10000
+  ORDER BY way_area DESC
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="landuse" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#c3d9ad" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'university')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'stadium')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'sports_center')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'school')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <PolygonSymbolizer fill="#dcdcdc" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <PolygonSymbolizer fill="#f6f6f6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'parking')</Filter>
+    <PolygonSymbolizer fill="#eeeeee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'park')</Filter>
+    <PolygonSymbolizer fill="#c2debd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'industrial')</Filter>
+    <PolygonSymbolizer fill="#d7d7d7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'hospital')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#e6f2c1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'forest')</Filter>
+    <PolygonSymbolizer fill="#c3d9ad" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'common')</Filter>
+    <PolygonSymbolizer fill="#c2debd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'commercial')</Filter>
+    <PolygonSymbolizer fill="#d7d7d7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'college')</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#d6ded2" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[landuse]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
+  FROM planet_osm_polygon
+  ORDER BY way_area DESC
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="waterway_low" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.8" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.6" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.4" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.2" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.1" stroke="#3ebcef" />
+  </Rule>
+</Style>
+<Layer name="waterway_low"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterway_low</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[waterway]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, waterway AS type
+  FROM planet_osm_line
+  WHERE waterway IN ('river', 'canal')
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="waterway_med" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="0.4" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="0.2" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke="#3ebcef" />
+  </Rule>
+</Style>
+<Layer name="waterway_med"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterway_med</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="table"><![CDATA[( SELECT way, waterway AS type
+  FROM planet_osm_line
+  WHERE waterway IN ('river', 'canal', 'stream')
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="waterway_high" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <Filter>([type] = 'ditch')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([type] = 'ditch')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'ditch')</Filter>
+    <LineSymbolizer stroke-width="0.7" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'ditch')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'ditch')</Filter>
+    <LineSymbolizer stroke-width="0.3" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'ditch')</Filter>
+    <LineSymbolizer stroke-width="0.1" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="0.7" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="0.3" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="0.1" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="0.8" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="0.6" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#3ebcef" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer stroke="#3ebcef" />
+  </Rule>
+</Style>
+<Layer name="waterway_high"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterway_high</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="table"><![CDATA[( SELECT way, waterway AS type
+  FROM planet_osm_line
+  WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="water_gen0" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#3ebcef" />
+  </Rule>
+</Style>
+<Layer name="water_gen0"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water_gen0</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[water_gen0]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, "natural" AS type, way_area AS area
+  FROM planet_osm_polygon
+  WHERE ("natural" IN ('water', 'pond')
+    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))
+    AND way_area > 10000
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="water_gen1" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#3ebcef" />
+  </Rule>
+</Style>
+<Layer name="water_gen1"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water_gen1</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[water_gen1]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, "natural" AS type, way_area AS area
+  FROM planet_osm_polygon
+  WHERE ("natural" IN ('water', 'pond')
+    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))
+    AND way_area > 1000
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="water" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#3ebcef" />
+  </Rule>
+</Style>
+<Layer name="water"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[water]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, way_area AS area
+  FROM planet_osm_polygon
+  WHERE "natural" IN ('water', 'pond')
+    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="landuse_overlays" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'wetland')</Filter>
+    <PolygonPatternSymbolizer file="img/marsh-16.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'wetland')</Filter>
+    <PolygonPatternSymbolizer file="img/marsh-32.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'nature_reserve')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#83b156" stroke-opacity="0.3" stroke-dasharray="1, 1" />
+    <PolygonSymbolizer fill="#83b156" fill-opacity="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'nature_reserve')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#83b156" stroke-opacity="0.3" stroke-dasharray="1, 1" />
+    <PolygonSymbolizer fill="#83b156" fill-opacity="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'nature_reserve')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#83b156" stroke-opacity="0.3" stroke-dasharray="1, 1" />
+    <PolygonSymbolizer fill="#83b156" fill-opacity="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'nature_reserve')</Filter>
+    <LineSymbolizer stroke-width="0.8" stroke="#83b156" stroke-opacity="0.3" stroke-dasharray="1, 1" />
+    <PolygonSymbolizer fill="#83b156" fill-opacity="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'nature_reserve')</Filter>
+    <LineSymbolizer stroke-width="0.6" stroke="#83b156" stroke-opacity="0.3" stroke-dasharray="1, 1" />
+    <PolygonSymbolizer fill="#83b156" fill-opacity="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'nature_reserve')</Filter>
+    <LineSymbolizer stroke-width="0.4" stroke="#83b156" stroke-opacity="0.3" stroke-dasharray="1, 1" />
+    <PolygonSymbolizer fill="#83b156" fill-opacity="0.1" />
+  </Rule>
+</Style>
+<Layer name="landuse_overlays"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse_overlays</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[landuse_overlays]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, way_area AS area, COALESCE(leisure) AS type
+  FROM planet_osm_polygon
+  WHERE leisure = 'nature_reserve'
+  ORDER BY way_area DESC
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="admin" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([admin_level] = 2)</Filter>
+    <LineSymbolizer stroke-opacity="0.4" stroke="#332244" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([admin_level] = 2)</Filter>
+    <LineSymbolizer stroke-opacity="0.3" stroke="#332244" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([admin_level] = 2)</Filter>
+    <LineSymbolizer stroke-opacity="0.25" stroke="#332244" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([admin_level] = 2)</Filter>
+    <LineSymbolizer stroke="#332244" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>admin</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="id"><![CDATA[admin]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, admin_level
+  FROM planet_osm_line
+  WHERE boundary = 'administrative'
+    AND admin_level IN ('2','3','4')
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+<Style name="buildings" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'hedge')</Filter>
+    <PolygonSymbolizer fill="#cfcfcf" />
+    <LineSymbolizer stroke="#b6b6b6" stroke-width="0.4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'hedge')</Filter>
+    <PolygonSymbolizer fill="#cfcfcf" />
+    <LineSymbolizer stroke="#c2c2c2" stroke-width="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([type] = 'hedge')</Filter>
+    <BuildingSymbolizer fill="#c3d9ad" height="1.25" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'hedge')</Filter>
+    <PolygonSymbolizer fill="#cfcfcf" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] != 'hedge')</Filter>
+    <PolygonSymbolizer fill="#cfcfcf" />
+    <LineSymbolizer stroke="#b6b6b6" stroke-width="0.4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] != 'hedge')</Filter>
+    <PolygonSymbolizer fill="#cfcfcf" />
+    <LineSymbolizer stroke="#c2c2c2" stroke-width="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([type] != 'hedge')</Filter>
+    <BuildingSymbolizer fill="#cfcfcf" height="1.25" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] != 'hedge')</Filter>
+    <PolygonSymbolizer fill="#cfcfcf" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#cfcfcf" />
+    <LineSymbolizer stroke="#b6b6b6" stroke-width="0.4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <PolygonSymbolizer fill="#cfcfcf" />
+    <LineSymbolizer stroke="#c2c2c2" stroke-width="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#cfcfcf" />
+  </Rule>
+</Style>
+<Layer name="buildings"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>buildings</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="host"><![CDATA[osm.kodapan.se]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <!--Parameter name="password"><![CDATA[osm]]></Parameter-->
+       <Parameter name="table"><![CDATA[( SELECT way, "building" AS type
+  FROM planet_osm_polygon
+  WHERE building NOT IN ('0','false', 'no')
+  ORDER BY ST_YMin(ST_Envelope(way)) DESC
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <!--Parameter name="user"><![CDATA[osm]]></Parameter-->
+    </Datasource>
+  </Layer>
+
+</Map>
